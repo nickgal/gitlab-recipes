@@ -71,7 +71,7 @@ sudo su -l gitlab -c "cd gitlab && mkdir tmp"
 sudo su -l gitlab -c "cd gitlab/config && cp gitlab.yml.example gitlab.yml"
 sudo su -l gitlab -c "cd gitlab/config && cp database.yml.example database.yml"
 sudo sed -i 's/"secure password"/"'$userPassword'"/' /home/gitlab/gitlab/config/database.yml # Insert the mysql root password.
-sudo su -l gitlab -c "cd gitlab && bundle install --without development test --deployment"
+sudo su -l gitlab -c "cd gitlab && bundle install --without development test sqlite postgres --deployment"
 sudo su -l gitlab -c "cd gitlab && bundle exec rake gitlab:app:setup RAILS_ENV=production"
 
 # Setup gitlab hooks
