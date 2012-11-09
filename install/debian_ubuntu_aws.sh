@@ -66,7 +66,7 @@ sudo apt-get install -y mysql-server
 sudo gem install charlock_holmes --version '0.6.8'
 sudo pip install pygments
 sudo gem install bundler
-sudo su -l gitlab -c "git clone git://github.com/gitlabhq/gitlabhq.git gitlab" # Using master everywhere.
+sudo su -l gitlab -c "git clone git://github.com/nickgal/gitlabhq.git gitlab" # Using master everywhere.
 sudo su -l gitlab -c "cd gitlab && mkdir tmp"
 sudo su -l gitlab -c "cd gitlab/config && cp gitlab.yml.example gitlab.yml"
 sudo su -l gitlab -c "cd gitlab/config && cp database.yml.example database.yml"
